@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<!-- 修改 lang 属性为有效的语言代码 -->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>CSS练习</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        h2 {
+            /* 优先使用宋体字体，若不可用则使用 Century 字体，最后使用系统默认衬线字体 */
+            font-family: '宋体', 'Century', serif;
+            text-decoration: underline; 
+            color: red;
+        }
+        .blueviolet-text {
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS练习</h1>
+    <div>
+        <h2>使用样式表的三种方式</h2>
+        <ul>
+            <li>外部样式表</li>
+            <!-- 使用 style 属性添加内联样式 -->
+            <li style="font-weight: bold;">内部样式表</li>
+            <li class="blueviolet-text">内嵌样式表</li>
+        </ul>
+    </div>
+</body>
+</html>
