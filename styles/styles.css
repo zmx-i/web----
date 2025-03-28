@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: '微软雅黑', sans-serif;
+}
+
+body {
+    background-color: #fff9e6;
+    line-height: 1.6;
+}
+
+/* 导航栏 */
+.nav-bar {
+    background: linear-gradient(135deg, #8b0000, #d32f2f);
+    padding: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 其他样式... */
