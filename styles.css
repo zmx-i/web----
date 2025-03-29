@@ -1,0 +1,37 @@
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    /* 使用 border-box 盒模型，使元素的宽度和高度包含内边距和边框 */
+    box-sizing: border-box;
+    font-family: '微软雅黑', sans-serif;
+}
+
+body {
+    background-color: #fff9e6;
+    line-height: 1.6;
+}
+
+/* 导航栏动画 */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.main-nav {
+    background: linear-gradient(135deg, #8b0000, #c62828);
+    /* 使用 rem 单位，便于响应式设计 */
+    padding: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideDown 0.5s ease-out;
+}
+
+/* 此处省略其他 CSS 代码 */

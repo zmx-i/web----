@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="河南六大必吃美食打卡指南">
+    <title>中原美食地图 | 河南特色美食指南</title>
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            /* 使用 border-box 盒模型，使元素的宽度和高度包含内边距和边框 */
+            box-sizing: border-box;
+            font-family: '微软雅黑', sans-serif;
+        }
+
+        body {
+            background-color: #fff9e6;
+            line-height: 1.6;
+        }
+
+        /* 导航栏动画 */
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .main-nav {
+            background: linear-gradient(135deg, #8b0000, #c62828);
+            /* 使用 rem 单位，便于响应式设计 */
+            padding: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1200px;
+        }
+
+        .nav-item {
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+            margin-right: 0.5rem;
+        }
+
+        .search-box button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* 主内容区 */
+        .main-content {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        /* 美食卡片动画 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            padding: 3rem 0;
+        }
+
+        .food-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+            position: relative;
+            animation: fadeIn 0.5s ease-out;
+            animation-fill-mode: both;
+            animation-delay: calc(var(--index) * 0.1s);
+        }
+
+        /* 设置自定义属性 --index 用于动画延迟 */
+        .food-card:nth-child(1) {
+            --index: 1;
+        }
+
+        .food-card:nth-child(2) {
+            --index: 2;
+        }
+
+        .food-card:nth-child(3) {
+            --index: 3;
+        }
+
+        .food-card:nth-child(4) {
+            --index: 4;
+        }
+
+        .food-card:nth-child(5) {
+            --index: 5;
+        }
+
+        .food-card:nth-child(6) {
+            --index: 6;
+        }
+
+        .food-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card-media {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .card-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+            loading: lazy;
+        }
+
+        .card-media img:hover {
+            transform: scale(1.1);
+        }
+
+        .video-btn {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .video-btn:hover {
+            background: #8b0000;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .food-name {
+            color: #8b0000;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .food-detail {
+            color: #666;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        .social-share {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .social-share button {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .social-share button:hover {
+            background: #8b0000;
+        }
+
+        /* 信息表格 */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 3rem 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .data-table th {
+            background: #8b0000;
+            color: white;
+            padding: 1.2rem;
+            text-align: left;
+        }
+
+        .data-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .data-table tr:hover {
+            background-color: #fff5e6;
+        }
+
+        /* 页脚动画 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer {
+            background: linear-gradient(135deg, #8b0000, #c62828);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .card-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-container {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .main-nav {
+                flex-direction: column;
+            }
+
+            .search-box {
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 修改字体颜色为黑色，使用黑体 -->
+    <h1 style="text-align: center; font-family: '黑体', sans-serif; color: #000000;">中原美食地图 | 河南特色美食指南</h1>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-item">美食地图</div>
+            <div class="nav-item">视频攻略</div>
+            <div class="nav-item">店家信息</div>
+            <div class="nav-item">关于我们</div>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="搜索美食...">
+            <button>🔍</button>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <!-- 美食卡片区 -->
+        <div class="card-wrapper">
+            <!-- 原始四个美食 -->
+            <!-- 方中山胡辣汤 -->
+            <article class="food-card">
+                <div class="card-media">
+                    <img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.9Kdi66e4gSWaqD88ct_0CAHaFW?w=292&h=211&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                        alt="方中山胡辣汤">
+                    <div class="video-btn" onclick="window.open('https://www.douyin.com/video/7045850294655159593')">
+                        观看视频 →
+                    </div>
+                    <div class="social-share">
+                        <button>💬</button>
+                        <button>📱</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="food-name">郑州方中山胡辣汤</h3>
+                    <p class="food-detail">📍 郑州市管城区紫荆山路</p>
+                    <p class="food-detail">🌶️ 麻辣指数：★★★★★</p>
+                    <p class="food-detail">⏰ 06:00-12:30</p>
+                </div>
+            </article>
+
+            <!-- 合记烩面 -->
+            <article class="food-card">
+                <div class="card-media">
+                    <img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.cXbWoAZWO9ZGy10QO2lHPwHaFj?w=221&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                        alt="合记烩面">
+                    <div class="video-btn" onclick="window.open('https://v.douyin.com/V877sHam')">
+                        观看视频 →
+                    </div>
+                    <div class="social-share">
+                        <button>💬</button>
+                        <button>📱</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="food-name">郑州合记烩面</h3>
+                    <p class="food-detail">📍 郑州市金水区人民路</p>
+                    <p class="food-detail">🍜 汤底类型：羊肉浓汤</p>
+                    <p class="food-detail">⏰ 10:00-22:00</p>
+                </div>
+            </article>
+
+            <!-- 南关小碗牛肉汤 -->
+            <article class="food-card">
+                <div class="card-media">
+                    <img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.Ecv3aozwBAX7mH1bGKvdjAHaFQ?w=253&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                        alt="南关牛肉汤">
+                    <div class="video-btn" onclick="window.open('https://www.bilibili.com/video/BV1o84y1A7zg')">
+                        观看视频 →
+                    </div>
+                    <div class="social-share">
+                        <button>💬</button>
+                        <button>📱</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="food-name">洛阳南关小碗牛肉汤</h3>
+                    <p class="food-detail">📍 洛阳市老城区南关街</p>
+                    <p class="food-detail">🥣 汤品特色：百年老汤配方</p>
+                    <p class="food-detail">🕒 最佳品尝时间：05:00-09:00</p>
+                </div>
+            </article>
+
+            <!-- 郏县饸烙面 -->
+            <article class="food-card">
+                <div class="card-media">
+                    <img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.TmeKBZrvq68ZH87yJLqLfQHaHa?w=197&h=196&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                        alt="郏县饸烙面">
+                    <div class="video-btn" onclick="window.open('https://v.douyin.com/bCWSrxz')">
+                        观看视频 →
+                    </div>
+                    <div class="social-share">
+                        <button>💬</button>
+                        <button>📱</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="food-name">郏县张记朝阳饸烙面</h3>
+                    <p class="food-detail">📍 平顶山市郏县朝阳路</p>
+                    <p class="food-detail">🍜 面条特色：传统饸烙床压制</p>
+                    <p class="food-detail">⏰ 06:00-21:00</p>
+                </div>
+            </article>
+
+            <!-- 新增两个美食 -->
+            <!-- 开封黄家老店灌汤包 -->
+            <article class="food-card">
+                <div class="card-media">
+                    <img src="images/黄家老店.jpg" alt="开封灌汤包"
+                        onerror="this.src='https://tse1-mm.cn.bing.net/th/id/OIP-C.5x9D4X7v7Jz6qY7w8Q2hZQHaE8?w=268&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'">
+                    <div class="video-btn" onclick="window.open('https://www.bilibili.com/video/BV1FT411f7z3/')">
+                        观看视频 →
+                    </div>
+                    <div class="social-share">
+                        <button>💬</button>
+                        <button>📱</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="food-name">开封黄家老店灌汤包</h3>
+                    <p class="food-detail">📍 开封市鼓楼区寺后街8号</p>
+                    <p class="food-detail">🥟 提如灯笼，放下似菊花</p>
+                    <p class="food-detail">⏰ 09:00-21:30</p>
+                </div>
+            </article>
+
+            <!-- 道口烧鸡 -->
+            <article class="food-card">
+                <div class="card-media">
+                    <img src="images/道口烧鸡.jpg" alt="道口烧鸡"
+                        onerror="this.src='https://tse2-mm.cn.bing.net/th/id/OIP-C.WgV6cU8h7S3XQlNl0C5qJQHaE8?w=274&h=183&c=7&r=0&o=5&dpr=1.3&pid=1.7'">
+                    <div class="video-btn" onclick="window.open('https://www.douyin.com/video/7153444861138570509')">
+                        观看视频 →
+                    </div>
+                    <div class="social-share">
+                        <button>💬</button>
+                        <button>📱</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="food-name">道口烧鸡</h3>
+                    <p class="food-detail">📍 安阳市滑县道口镇顺北街</p>
+                    <p class="food-detail">🍗 国家级非物质文化遗产</p>
+                    <p class="food-detail">⏰ 08:00-19:00</p>
+                </div>
+            </article>
+        </div>
+
+        <!-- 数据表格 -->
+        <table class="data-table">
+            <tr>
+                <th>店铺名称</th>
+                <th>招牌菜</th>
+                <th>人均消费</th>
+                <th>推荐指数</th>
+            </tr>
+            <tr>
+                <td>方中山胡辣汤</td>
+                <td>精品胡辣汤</td>
+                <td>¥15-20</td>
+                <td>★★★★★</td>
+            </tr>
+            <tr>
+                <td>合记烩面</td>
+                <td>传统羊肉烩面</td>
+                <td>¥35-50</td>
+                <td>★★★★☆</td>
+            </tr>
+            <tr>
+                <td>南关牛肉汤</td>
+                <td>小碗牛肉汤</td>
+                <td>¥10-15</td>
+                <td>★★★★★</td>
+            </tr>
+            <tr>
+                <td>张记饸烙面</td>
+                <td>羊肉饸烙面</td>
+                <td>¥12-20</td>
+                <td>★★★★☆</td>
+            </tr>
+            <tr>
+                <td>黄家老店</td>
+                <td>灌汤包套餐</td>
+                <td>¥35-60</td>
+                <td>★★★★☆</td>
+            </tr>
+            <tr>
+                <td>道口烧鸡</td>
+                <td>义兴张烧鸡</td>
+                <td>¥45-80/只</td>
+                <td>★★★★★</td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <p>版权所有 &copy; 2025 中原美食地图 | 联系我们: contact@example.com</p>
+    </footer>
+
+    <script>
+        // 图片加载失败处理
+        document.querySelectorAll('img').forEach(img => {
+            img.onerror = function () {
+                this.style.objectFit = 'contain';
+                this.style.padding = '1rem';
+                this.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="%23ccc">图片加载失败</text></svg>';
+            }
+        });
+    </script>
+</body>
+
+</html>
