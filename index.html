@@ -1,16 +1,179 @@
 ﻿<!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>蛋炒饭相关介绍</title>
+    <!-- 添加描述和关键词，提升 SEO -->
+    <meta name="description" content="这是一个关于蛋炒饭的美食专题页面，包含蛋炒饭的制作步骤、教学视频、成品展示、推荐搭配主食和一周餐单推荐。">
+    <meta name="keywords" content="蛋炒饭, 美食, 制作步骤, 教学视频, 一周餐单">
+    <title>美食-蛋炒饭专题</title>
+    <style>
+        /* 基础样式 */
+        body {
+            background-color: #fff8dc;
+            font-family: "Microsoft YaHei", sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* 总标题样式 */
+        .main-title {
+            text-align: center;
+            color: #8b4513;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #deb887;
+        }
+
+        /* 内容卡片样式 */
+        .section-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* 标题样式 */
+        h2 {
+            color: #a0522d;
+            border-left: 5px solid #deb887;
+            padding-left: 15px;
+            margin: 25px 0;
+        }
+
+        /* 列表交互效果 */
+        ol li,
+        ul li {
+            padding: 12px;
+            margin: 8px 0;
+            background: #fffff0;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        ol li:hover,
+        ul li:hover {
+            background: #faebd7;
+        }
+
+        /* 图片样式 */
+        img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.03);
+        }
+
+        /* 表格样式 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border: 1px solid #deb887;
+        }
+
+        th {
+            background-color: #fff8dc;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background-color: #faebd7;
+        }
+
+        /* 链接样式 */
+        a {
+            color: #cd853f;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #8b4513;
+            text-decoration: underline;
+        }
+
+        /* 视频容器 */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        /* 导航栏样式 */
+        nav {
+            background-color: #deb887;
+            text-align: center;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #8b4513;
+            margin: 0 15px;
+        }
+
+        /* 页脚样式 */
+        footer {
+            text-align: center;
+            color: #8b4513;
+            margin-top: 30px;
+            border-top: 3px solid #deb887;
+            padding-top: 20px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>第一部分标题：蛋炒饭制作步骤</h1>
-    <div>
-        <p>蛋炒饭制作流程</p>
+    <!-- 添加导航栏 -->
+    <nav>
+        <a href="#steps">制作步骤</a>
+        <a href="#video">教学视频</a>
+        <a href="#showcase">成品展示</a>
+        <a href="#side-dishes">推荐搭配</a>
+        <a href="#meal-plan">一周餐单</a>
+    </nav>
+    <h1 class="main-title">🥘 美食 - 蛋炒饭专题 🍳</h1>
+
+    <div class="section-card" id="steps">
+        <h2>🍚 蛋炒饭制作步骤</h2>
         <ol>
             <li>准备食材和调料：米饭、鸡蛋、葱花、火腿肠（可选）、水、食用油、生抽。</li>
             <li>处理食材：鸡蛋打入碗中，加入少量盐，用筷子搅拌均匀；火腿肠切成小丁；葱花切段备用。</li>
@@ -22,41 +185,37 @@
             <li>出锅：撒上葱花，翻炒几下后即可出锅装盘。</li>
         </ol>
     </div>
-    <div>
-        <h2>第二部分标题：蛋炒饭教学视频</h2>
-        <p>观看蛋炒饭视频教程</p>
-        <a href="https://www.bilibili.com/video/BV1yt411z7JG/?share_source=copy_web">观看蛋炒饭视频教程</a>
-        <iframe 
-            src="https://player.bilibili.com/player.html?bvid=BV1yt411z7JG&page=1" 
-            scrolling="no" 
-            border="0" 
-            frameborder="no" 
-            framespacing="0" 
-            allowfullscreen="true"
-            width="640"
-            height="360">
-        </iframe>
+
+    <div class="section-card" id="video">
+        <h2>🎥 蛋炒饭教学视频</h2>
+        <div class="video-container">
+            <iframe src="https://player.bilibili.com/player.html?bvid=BV1yt411z7JG&page=1" allowfullscreen="true"
+                scrolling="no">
+            </iframe>
+        </div>
     </div>
-    <div>
-        <h3>第三部分标题：蛋炒饭成品展示</h3>
-        <p>蛋炒饭成品展示</p>
-        <p><img src="images/OIP-C (1).jpg" alt="蛋炒饭成品展示" width="400"></p>
+
+    <div class="section-card" id="showcase">
+        <h2>📸 蛋炒饭成品展示</h2>
+        <!-- 确保图片路径存在且正确 -->
+        <!-- 修改路径分隔符 -->
+        <img src="images/蛋炒饭.jpg" alt="蛋炒饭成品展示" width="400">
     </div>
-    <div>
-        <h3>第四部分标题</h3>
-        <h4>推荐可以搭配的主食<br></h4>
+
+    <div class="section-card" id="side-dishes">
+        <h2>🍽️ 推荐搭配主食</h2>
         <ul>
-            <li>面包</li>
-            <li>馒头</li>
-            <li>面条</li>
-            <li>米粉</li>
-            <li>煎饼</li>
+            <li>🥖 面包</li>
+            <li>🍞 馒头</li>
+            <li>🍜 面条</li>
+            <li>🍲 米粉</li>
+            <li>🌯 煎饼</li>
         </ul>
     </div>
-    <div>
-        <h2>第五部分标题</h2>
-        <h3>推荐饭菜</h3>
-        <table border="1">
+
+    <div class="section-card" id="meal-plan">
+        <h2>📅 一周餐单推荐</h2>
+        <table>
             <thead>
                 <tr>
                     <th>餐别</th>
@@ -95,18 +254,11 @@
             </tbody>
         </table>
     </div>
-    <h2>自定义标题</h2>
-    <form>
-        <label for="newTitle">输入新标题：</label>
-        <input type="text" id="newTitle" name="newTitle" placeholder="请输入标题内容">
-        <input type="submit" value="提交标题">
-    </form>
+    <!-- 添加页脚 -->
+    <footer>
+        <p>版权所有 &copy; 2025 美食专题网站</p>
+        <p>联系我们: <a href="mailto:info@example.com">info@example.com</a></p>
+    </footer>
 </body>
-</html>
-   
-   
 
-      
- 
-       
-      
+</html>
