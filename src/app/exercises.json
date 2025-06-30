@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "title": "塞纳河夕阳巡游",
+    "description": "沉浸式体验巴黎塞纳河的浪漫黄昏，通过虚拟导览领略沿岸的历史建筑与文化底蕴。",
+    "link": "/practice/embed-demo",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": ["法国", "河流巡游", "浪漫之旅"]
+  },
+  {
+    "id": 2,
+    "title": "京都樱花季漫步",
+    "description": "探索古都京都的春日樱花盛景，感受传统日式庭园的宁静与美丽。",
+    "link": "/practice/my-app",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": ["日本", "樱花", "文化体验"]
+  },
+  {
+    "id": 3,
+    "title": "托斯卡纳葡萄酒庄",
+    "description": "深入意大利托斯卡纳地区的精品酒庄，品味世界级葡萄酒的醇香与历史。",
+    "link": "/practice/03-css-01",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": ["意大利", "葡萄酒", "田园风光"]
+  },
+  {
+    "id": 4,
+    "title": "冰岛极光奇观",
+    "description": "在冰岛的璀璨星空下，捕捉北极光的神秘舞蹈，体验大自然的震撼之美。",
+    "link": "/practice/03-css-02",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": ["冰岛", "极光", "自然奇观"]
+  },
+  {
+    "id": 5,
+    "title": "马尔代夫水上别墅",
+    "description": "享受马尔代夫碧蓝海水上的奢华度假体验，在私人水上别墅中放松身心。",
+    "link": "/practice/04-css-01",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": ["马尔代夫", "海岛度假", "水上别墅"]
+  },
+  {
+    "id": 6,
+    "title": "瑞士阿尔卑斯山脉",
+    "description": "登临瑞士阿尔卑斯山的雪峰之巅，俯瞰壮丽的山谷与冰川美景。",
+    "link": "/practice/04-css-02",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": ["瑞士", "雪山", "滑雪胜地"]
+  },
+  {
+    "id": 7,
+    "title": "摩洛哥撒哈拉沙漠",
+    "description": "穿越摩洛哥撒哈拉沙漠的金色沙丘，在星空下体验游牧民族的传统生活。",
+    "link": "/practice/04-css-02-relative",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": ["摩洛哥", "沙漠", "文化探索"]
+  },
+  {
+    "id": 8,
+    "title": "巴厘岛乌布梯田",
+    "description": "探访印尼巴厘岛乌布地区的翠绿梯田，感受传统农耕文化的智慧与美丽。",
+    "link": "/practice/05-news01",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": ["印尼", "梯田", "农耕文化"]
+  },
+  {
+    "id": 9,
+    "title": "挪威峡湾游轮",
+    "description": "乘坐豪华游轮穿行于挪威壮观的峡湾之间，欣赏垂直瀑布与峭壁奇景。",
+    "link": "/practice/06-news01",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": ["挪威", "峡湾", "游轮"]
+  },
+  {
+    "id": 10,
+    "title": "希腊圣托里尼日落",
+    "description": "在希腊圣托里尼岛的白色小镇中，观赏爱琴海上最壮丽的日落景色。",
+    "link": "/practice/06-news02",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": ["希腊", "日落", "海岛风情"]
+  },
+  {
+    "id": 11,
+    "title": "新西兰霍比特人村",
+    "description": "走进《魔戒》拍摄地新西兰霍比特人村，体验中土世界的奇幻与宁静。",
+    "link": "/practice/07-async-01",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": ["新西兰", "电影取景地", "奇幻之旅"]
+  },
+  {
+    "id": 12,
+    "title": "肯尼亚野生动物园",
+    "description": "在肯尼亚马赛马拉国家保护区中，近距离观察非洲五大野生动物的壮观迁徙。",
+    "link": "/practice/07-async-02",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": ["肯尼亚", "野生动物", "Safari"]
+  },
+  {
+    "id": 13,
+    "title": "土耳其卡帕多奇亚热气球",
+    "description": "乘坐热气球飞越土耳其卡帕多奇亚的奇异地貌，从空中俯瞰童话般的石柱森林。",
+    "link": "/practice/index",
+    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "tags": ["土耳其", "热气球", "地质奇观"]
+  }
+] 
