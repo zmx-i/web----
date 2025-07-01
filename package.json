@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "blog-platform",
   "version": "0.1.0",
   "private": true,
@@ -23,5 +24,14 @@
     "eslint-config-next": "15.3.4",
     "tailwindcss": "^4",
     "typescript": "^5"
+=======
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.30.0",
+    "@next/eslint-plugin-next": "^15.3.4"
+  },
+  "dependencies": {
+    "next": "^15.3.4"
+>>>>>>> 4d49c508eaf67625854630484f4837bb70375d6a
   }
 }
