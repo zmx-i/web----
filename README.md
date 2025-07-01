@@ -120,8 +120,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - QAnything API
 - WakaTime API
     <div class="gallery">
-        <img src="blog-platform\public\screenshots\QAnything运行截图.png" alt="QAnything运行截图" />
-        <img src="blog-platform\public\screenshots\WakaTime运行截图.png" alt="WakaTime运行截图" />
-        <img src="blog-platform\public\screenshots\Next.js运行截图.png" alt="Next.js运行截图" />
-    </div>
+        <img src="/public/screenshots/qanything-screenshot.png" alt="QAnything运行截图" />
+        <img src="/public/screenshots/wakatime-screenshot.png" alt="WakaTime运行截图" />
+        <img src="/public/screenshots/nextjs-screenshot.png" alt="Next.js运行截图" />
+    </div>  
 </>
