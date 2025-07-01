@@ -124,4 +124,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
         <img src="/public/screenshots/wakatime-screenshot.png" alt="WakaTime运行截图" />
         <img src="/public/screenshots/nextjs-screenshot.png" alt="Next.js运行截图" />
     </div>  
-</>
+</div>
